@@ -11,10 +11,13 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
+    public $cssOptions = [ 'position' => \yii\web\View::POS_HEAD ];
+    public $jsOptions = [ 'position' => \yii\web\View::POS_HEAD ];
     public $css = [
         'css/site.css',
     ];
     public $js = [
+		'js/common.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
