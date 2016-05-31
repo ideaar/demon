@@ -20,14 +20,14 @@ class ToolsController extends Controller
 		$subject = Yii::$app->request->post('otime');
 		if( empty($subject) ){
 			$result['error'] = 1;
-			$result['msg'] = '参数otime不能为空';
+			$result['msg'] = '请输入数据';
 
 			return $result;
 		}
 		$rs = $this->isTimeValid($subject);
 		if( !$rs ){
 			$result['error'] = 1;
-			$result['msg'] = '参数otime非法';
+			$result['msg'] = '数据格式不正确';
 
 			return $result;
 		}
