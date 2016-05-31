@@ -33,7 +33,7 @@ class ToolsController extends Controller
 		}
 
 		if( $rs>9999 ){
-			$result['data'] = date('Y-m-d h:i:s', $rs);
+			$result['data'] = date('Y-m-d H:i:s', $rs);
 		}else{
 			$result['data'] = strtotime($subject);
 		}
