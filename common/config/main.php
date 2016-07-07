@@ -10,5 +10,11 @@ return [
             'showScriptName' => false,
             'suffix' => '.html',
         ],
+		'redis' => [
+			'class' => 'yii\redis\Connection',
+			'hostname' => 'localhost',
+			'port' => 6379,
+			'database' => 0,
+		]
     ],
 ];
