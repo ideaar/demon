@@ -45,4 +45,8 @@ class SiteController extends Controller
 	public function actionTest(){
 		echo 'ok';
 	}
+
+	public function actionInfo(){
+		phpinfo();
+	}
 }
