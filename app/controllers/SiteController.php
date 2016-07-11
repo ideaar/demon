@@ -17,20 +17,21 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
-		/**
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'index'],
                         'allow' => true,
                     ],
+					/**
                     [
                         'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+					**/
                 ],
             ],
             'verbs' => [
@@ -40,7 +41,6 @@ class SiteController extends Controller
                 ],
             ],
         ];
-		**/
     }
 
     /**
