@@ -17,6 +17,7 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
+		/**
         return [
             'access' => [
                 'class' => AccessControl::className(),
@@ -39,6 +40,7 @@ class SiteController extends Controller
                 ],
             ],
         ];
+		**/
     }
 
     /**
@@ -55,7 +57,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+		echo 'app index';
     }
 
     public function actionLogin()
@@ -80,4 +82,8 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+	public function actionTest(){
+		echo 'app test';
+	}
 }
